@@ -1,0 +1,161 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+a {
+  color: #0077ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+
+form h2 {
+  margin-bottom: 1.5rem;
+  color: #222;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.8px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.4);
+}
+
+button {
+  width: 100%;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+p a {
+  font-weight: 600;
+}
+
+nav {
+  width: 100%;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav button {
+  max-width: 120px;
+}
+
+h2, h3 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Tabla estilizada */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #0077ff;
+  color: white;
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f9ff;
+}
+
+/* Mensajes de error */
+p[style*="color: red"] {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem 1.5rem;
+    max-width: 100%;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+  }
+}
