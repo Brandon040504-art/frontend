@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-// Pon aquí la URL de tu backend desplegado en Render
-const API_URL = 'https://sistema-calificaciones-backend.onrender.com'
+// Usa aquí la URL real de tu backend en Render
+const API_URL = 'https://sistema-calificaciones-backend.onrender.com/api'
 
 export default function Login() {
   const [email, setEmail] = useState('')
