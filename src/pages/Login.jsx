@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
+// Pon aquí la URL de tu backend desplegado en Render
+const API_URL = 'https://sistema-calificaciones-backend.onrender.com'
+
 export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -13,7 +16,6 @@ export default function Login() {
       setError('Todos los campos son obligatorios')
       return false
     }
-    // Validación básica de email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setError('El correo no es válido')
@@ -33,7 +35,7 @@ export default function Login() {
     if (!validateForm()) return
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
+      const res = await axios.post(`${API_URL}/auth/login`, {
         email,
         password
       })
